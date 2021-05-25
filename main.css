@@ -1,0 +1,21 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+#score {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+.canvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tetris {
+    border: solid 2px white;
+}
