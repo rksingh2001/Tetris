@@ -181,7 +181,6 @@ function arenaSweep() {
                 player.score += 10*Math.floor(row_counter/5 + 1);
                 if (drop_interval !== 100)
                     drop_interval = 500-100*Math.floor(row_counter/5);
-                console.log(drop_interval);
             }
         }
     }
