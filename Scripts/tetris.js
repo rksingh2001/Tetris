@@ -206,6 +206,7 @@ function dropMatrix(player) {
         player.position.y++;
     else {
         merge(arena, player);
+        drop_interval = 500;
         playerReset();
         arenaSweep();
     }
