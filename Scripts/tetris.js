@@ -29,6 +29,13 @@ const colors = [
     "#047FD6",
 ]
 
+const tetris_theme = new Audio("../tetris-theme.mp3");
+window.onload = tetris_theme.play();
+
+tetris_theme.addEventListener("ended", () => {
+    tetris_theme.play();
+})
+
 function drawMatrix(Matrix, offset) {
     Matrix.forEach((row, j) => {
         row.forEach((value, i) => {
@@ -168,7 +175,8 @@ let row_counter = 0;
 let drop_interval = 500;
 function arenaSweep() {
     for (let j = arena.length-1; j >= 0; --j) {
-        for (let i = 0; i < arena[j].length; ++i) {
+        const row = arena[j];
+        for (let i = 0; i < row.length; ++i) {
             if (arena[j][i] === 0) {
                 break;
             }
