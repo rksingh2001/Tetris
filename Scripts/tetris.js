@@ -31,7 +31,7 @@ const colors = [
 
 var tetris_theme = document.createElement("audio");
 tetris_theme.src = "../audios/tetris_theme.mp3";
-tetris_theme.play()
+window.onload = tetris_theme.play();
 
 tetris_theme.addEventListener("ended", () => {
     tetris_theme.play();
