@@ -29,6 +29,14 @@ const colors = [
     "#047FD6",
 ]
 
+var tetris_theme = document.createElement("audio");
+tetris_theme.src = "../audios/tetris_theme.mp3";
+tetris_theme.play()
+
+tetris_theme.addEventListener("ended", () => {
+    tetris_theme.play();
+})
+
 function drawMatrix(Matrix, offset) {
     Matrix.forEach((row, j) => {
         row.forEach((value, i) => {
