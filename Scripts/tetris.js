@@ -206,7 +206,6 @@ function dropMatrix(player) {
         player.position.y++;
     else {
         merge(arena, player);
-        drop_interval = 500;
         playerReset();
         arenaSweep();
     }
@@ -221,6 +220,7 @@ function playerReset() {
     // Player Lost
     if (didCollideYAxis(arena, player)) {
         player.score = 0;
+        drop_interval = 500;
         arena.forEach(row => row.fill(0));
     }
 }
